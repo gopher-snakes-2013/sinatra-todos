@@ -1,7 +1,7 @@
 <h1>Here's all the things to do:</h1>
 
 
-<form method = "post" action= "/todos">
+<form method = "post" action= "/">
 <label>New Todo
   <input type = "text" name="todo_name">
 </label>
@@ -9,7 +9,7 @@
 <input type="submit" value="Create Todo">
 </form>
 
-<% @todo.each do |todo| %> 
+<% @todos.each do |todo| %> 
 <%= todo.todos %>
 <% end %>
 

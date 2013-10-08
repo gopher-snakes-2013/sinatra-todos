@@ -13,11 +13,17 @@ Dotenv.load
 set :database, ENV['DATABASE_URL']
 
 get '/' do
-  @todo = Todo.all
+  @todos = Todo.all
+  erb :index
+
+end
+
+get '/filter' do
+  @todos = Todo.where(todos: "salar really sucks")
   erb :index
 end
 
-post '/todos' do
+post '/' do
   
   Todo.create(todos: params[:todo_name]) 
   redirect to('/')
