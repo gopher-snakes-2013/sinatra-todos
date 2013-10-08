@@ -12,7 +12,7 @@ feature 'Guest creates todo' do
 
   # This is a STRETCH scenario. MOVE ON unless you've already pushed to heroku
   # and submitted a pull request
-  scenario "it does not create the todo if they don't provide a name" do
+  xscenario "it does not create the todo if they don't provide a name" do
     visit '/'
 
     click_on "Create Todo"
