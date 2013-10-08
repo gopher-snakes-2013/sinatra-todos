@@ -15,3 +15,9 @@ set :database, ENV['DATABASE_URL']
 get '/' do
   erb :index
 end
+
+
+post '/' do
+  Todo.create(task: params[:task_text])
+  erb :index
+end
