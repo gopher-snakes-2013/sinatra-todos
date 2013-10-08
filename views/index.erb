@@ -1,1 +1,15 @@
 <h1>Here's all the things to do:</h1>
+
+
+<form method = "post" action= "/todos">
+<label>New Todo
+  <input type = "text" name="todo_name">
+</label>
+
+<input type="submit" value="Create Todo">
+</form>
+
+<% @todo.each do |todo| %> 
+<%= todo.todos %>
+<% end %>
+
