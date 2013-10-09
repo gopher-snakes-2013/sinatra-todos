@@ -18,6 +18,7 @@ end
 
 
 post '/' do
-  Todo.create(task: params[:task_text])
+  Todo.create(:task => params[:"New Todo"] )
   erb :index
+  # params.inspect
 end
