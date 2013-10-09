@@ -7,8 +7,8 @@ require 'models/todo'
 
 
 # This loads environment variables from the .env file
-require 'dotenv'
-Dotenv.load
+# require 'dotenv'
+# Dotenv.load
 
 set :database, ENV['DATABASE_URL']
 
