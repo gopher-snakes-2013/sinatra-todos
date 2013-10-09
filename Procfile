@@ -1,1 +1,1 @@
-web: bundle exec todo_app.rb -p $PORT
+web: bundle exec rackfile config.ru -p $PORT
