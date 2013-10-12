@@ -1,1 +1,18 @@
+<form method="post">
+  <label>New Todo
+   <input type="text" name="todos">
+    <input type="submit" value="Create Todo">
+  </label>
+</form>
+
+<% unless @todo && @todo.errors.empty? %>
+  <%= @todo.errors[:name][0].capitalize %>.
+<% end %>
+
 <h1>Here's all the things to do:</h1>
+<!-- <p> Take out the trash </p> -->
+<ul>
+  <% @todos.each do |todo|  %>
+<li> <%= todo.name %> </li> <button type="submit" method="post" action="/todos/1/complete"> Complete <%=todo.name %></button>
+<% end %>
+</ul>
