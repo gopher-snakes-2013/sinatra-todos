@@ -10,8 +10,14 @@ require 'models/todo'
 require 'dotenv'
 Dotenv.load
 
-set :database, ENV['DATABASE_URL']
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || postgres://localhost/todo')
 
 get '/' do
+	@todos = Todo.all
   erb :index
+end
+
+post '/todos' do
+  Todo.create(:todo => params["todo"])
+  redirect '/'
 end
