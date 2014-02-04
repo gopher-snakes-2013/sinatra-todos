@@ -1,1 +1,12 @@
+<form action="/" method="post">
+  <input type="textbox" name="New Todo" value="New Todo">
+  <input type="submit" value="Create Todo">
+</form>
+
 <h1>Here's all the things to do:</h1>
+
+<!-- begin -->
+<% Todo.all.each do |task|%>
+  <%= task.task %><br>
+<% end %>
+<!-- rescue -->
